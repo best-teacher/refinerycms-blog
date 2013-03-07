@@ -78,7 +78,7 @@ module Refinery
         end
 
         def uncategorized
-          live.includes(:categories).where(Refinery::Categorization.table_name => { :teacher_blog_category_id => nil })
+          live.includes(:categories).where(Refinery::TeacherBlog::Categorization.table_name => { :teacher_blog_category_id => nil })
         end
 
         def next(current_record)

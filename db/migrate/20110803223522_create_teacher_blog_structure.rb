@@ -30,12 +30,12 @@ class CreateTeacherBlogStructure < ActiveRecord::Migration
 
     add_index Refinery::TeacherBlog::Category.table_name, :id
 
-    create_table Refinery::Categorization.table_name, :id => true do |t|
+    create_table Refinery::TeacherBlog::Categorization.table_name, :id => true do |t|
       t.integer :teacher_blog_category_id
       t.integer :teacher_blog_post_id
     end
 
-    add_index Refinery::Categorization.table_name, [:teacher_blog_category_id, :teacher_blog_post_id], :name => 'index_teacher_blog_categories_teacher_blog_posts_on_bc_and_bp'
+    add_index Refinery::TeacherBlog::Categorization.table_name, [:teacher_blog_category_id, :teacher_blog_post_id], :name => 'index_teacher_blog_categories_teacher_blog_posts_on_bc_and_bp'
   end
 
   def down
@@ -45,8 +45,8 @@ class CreateTeacherBlogStructure < ActiveRecord::Migration
 
     drop_table Refinery::TeacherBlog::Post.table_name
     drop_table Refinery::TeacherBlog::Comment.table_name
-    drop_table Refinery::Category.table_name
-    drop_table Refinery::Categorization.table_name
+    drop_table Refinery::TeacherBlog::Category.table_name
+    drop_table Refinery::TeacherBlog::Categorization.table_name
   end
 
 end
