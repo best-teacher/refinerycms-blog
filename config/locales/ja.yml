@@ -2,7 +2,7 @@ ja:
   refinery:
     plugins:
       refinerycms_teacher_blog:
-        title: ブログ
+        title: 先生ブログ
     teacher_blog:
       admin:
         categories:
