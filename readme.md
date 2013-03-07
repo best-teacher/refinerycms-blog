@@ -1,8 +1,8 @@
-# Refinery CMS Blog
+# Refinery CMS TeacherBlog
 
-Simple blog engine for [Refinery CMS](http://refinerycms.com). It supports posts, categories and comments.
+Simple teacher_blog engine for [Refinery CMS](http://refinerycms.com). It supports posts, categories and comments.
 
-This version of `refinerycms-blog` supports Rails 3.2.x. To use Rails 2.3.x use the [refinerycms-blog "Rails 2.3.x stable branch"](http://github.com/resolve/refinerycms-blog/tree/rails2-stable).
+This version of `refinerycms-teacher_blog` supports Rails 3.2.x. To use Rails 2.3.x use the [refinerycms-teacher_blog "Rails 2.3.x stable branch"](http://github.com/resolve/refinerycms-teacher_blog/tree/rails2-stable).
 
 Options:
 
@@ -18,14 +18,14 @@ Refinery CMS version 2.0.0 or above.
 Open up your ``Gemfile`` and add at the bottom this line:
 
 ```ruby
-gem 'refinerycms-blog', '~> 2.0.0'
+gem 'refinerycms-teacher_blog', '~> 2.0.0'
 ```
 
 Now, run ``bundle install``
 
-Next, to install the blog plugin run:
+Next, to install the teacher_blog plugin run:
 
-    rails generate refinery:blog
+    rails generate refinery:teacher_blog
 
 Run database migrations:
 

@@ -1,0 +1,17 @@
+<% content_for :title, "#{t('.teacher_blog_archive_for', :date => @archive_date.strftime('%B %Y'))}" %>
+
+<% content_for :body do %>
+  <h1><%= t('.teacher_blog_archive_for', :date => @archive_date.strftime('%B %Y')) %></h1>
+  <% if @posts.any? %>
+    <section id="teacher_blog_posts">
+      <%= render :partial => "/refinery/teacher_blog/shared/post", :collection => @posts %>
+    </section>
+  <% else %>
+    <p><%= t('.no_teacher_blog_articles_posted', :date => @archive_date.strftime('%B %Y')) %></p>
+  <% end %>
+<% end %>
+
+<%= render :partial => '/refinery/teacher_blog/shared/body_content_right' %>
+
+<%= render :partial => "/refinery/content_page" %>
+<% content_for :stylesheets, stylesheet_link_tag('refinery/teacher_blog/frontend') %>
