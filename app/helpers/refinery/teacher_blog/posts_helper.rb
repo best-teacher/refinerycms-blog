@@ -28,6 +28,22 @@ module Refinery
         Refinery::TeacherBlog::Post.published_dates_older_than(cutoff)
       end
 
+      def teacher_blog_new_comment_path(post)
+        "/teacher_blog/#{post.slug_or_id}/comments"
+      end
+      def teacher_blog_category_path(cat)
+        "/teacher_blog/categories/#{cat.slug.empty? ? cat.id : cat.slug}"
+      end
+      def teacher_blog_post_path(post)
+        post.path
+      end
+      def teacher_blog_root_path
+        "/teacher_blog"
+      end
+      def teacher_blog_rss_feed_path
+        "/teacher_blog/feed.rss"
+      end
+
       class ArchiveWidget
         delegate :t, :link_to, :refinery, :render, :to => :view_context
         attr_reader :view_context

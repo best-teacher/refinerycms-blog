@@ -52,6 +52,14 @@ module Refinery
         custom_url.present? ? custom_url : title
       end
 
+      def slug_or_id
+        slug.empty? ? id.to_s : slug
+      end
+      
+      def path
+        "/teacher_blog/posts/#{slug_or_id}"
+      end
+
       class << self
         def by_archive(date)
           where(:published_at => date.beginning_of_month..date.end_of_month)
