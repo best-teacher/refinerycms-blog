@@ -1,4 +1,4 @@
-class AddSlugToPostsAndCategories < ActiveRecord::Migration
+class AddSlugToStudentBlogPostsAndCategories < ActiveRecord::Migration
   def change
     add_column Refinery::StudentBlog::Post.table_name, :slug, :string
     add_index Refinery::StudentBlog::Post.table_name, :slug

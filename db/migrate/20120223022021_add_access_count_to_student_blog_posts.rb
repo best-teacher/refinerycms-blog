@@ -1,4 +1,4 @@
-class AddAccessCountToPosts < ActiveRecord::Migration
+class AddAccessCountToStudentBlogPosts < ActiveRecord::Migration
   def change
     add_column Refinery::StudentBlog::Post.table_name, :access_count, :integer, :default => 0
     

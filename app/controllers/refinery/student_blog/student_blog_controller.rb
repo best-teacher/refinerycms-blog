@@ -5,12 +5,12 @@ module Refinery
       include ControllerHelper
 
       helper :'refinery/student_blog/posts'
-      before_filter :set_locale_en
+      before_filter :set_locale_ja
       before_filter :find_page, :find_all_student_blog_categories
 
       protected
         def set_locale_en
-          ::I18n.locale=:en
+          ::I18n.locale=:ja
         end
 
         def find_page
