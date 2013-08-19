@@ -12,7 +12,7 @@ doc/*
 # Refinery Specific
 *.tmproj
 *.autobackupbyrefinery.*
-/refinerycms-teacher_blog*.gem
+/refinerycms-student_blog*.gem
 .autotest
 spec/dummy
 

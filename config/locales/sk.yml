@@ -1,9 +1,9 @@
 sk:
   refinery:
     plugins:
-      refinerycms_teacher_blog:
-        title: TeacherBlog
-    teacher_blog:
+      refinerycms_student_blog:
+        title: StudentBlog
+    student_blog:
       admin:
         categories:
           category:
@@ -23,7 +23,7 @@ sk:
             no_items_yet: 'Nie sú žiadne %{type} komentáre.'
           show:
             comment: Komentár
-            teacher_blog_post: TeacherBlog článok
+            student_blog_post: StudentBlog článok
             from: Odoslal
             date: Dátum
             message: Správa
@@ -40,7 +40,7 @@ sk:
             save_as_draft: Uložiť ako koncept
             published_at: Dátum publikovania
             custom_url: Vlastná url
-            custom_url_help: Generovať url pre teacher_blog článok z tohto textu namiesto názvu teacher_blog článku.
+            custom_url_help: Generovať url pre student_blog článok z tohto textu namiesto názvu student_blog článku.
             source_url: Url adresa zdroja informácií
             source_url_help:  Url adresa zdroja informácií pre článok.
             source_url_title: Názov zdroja informácii
@@ -50,7 +50,7 @@ sk:
             copy_body: Skopírovať text článku do teaser.
             copy_body_help: Skopíruje text článku do teaser. Nechaj teaser nevyplnený, ak chceš aby ho Refinery automaticky vygenerovalo.
           index:
-            no_items_yet: 'Nie sú žiadne teacher_blog články. Klikni na "%{create}" pre pridanie prvého.'
+            no_items_yet: 'Nie sú žiadne student_blog články. Klikni na "%{create}" pre pridanie prvého.'
           uncategorized:
             no_items_yet: 'Nie sú žiadne nezradené články.'
           post:
@@ -97,7 +97,7 @@ sk:
           email: Email
           message: Správa
           closing_line: S pozdravom
-          ps: 'P.S. Všetky komentáre su uložené v sekcii "TeacherBlog" pod záložkou "Komentáre" v prípade ak by ich bolo potrebné zobraziť neskôr.'
+          ps: 'P.S. Všetky komentáre su uložené v sekcii "StudentBlog" pod záložkou "Komentáre" v prípade ak by ich bolo potrebné zobraziť neskôr.'
       shared:
         categories:
           title: Kategórie
@@ -130,9 +130,9 @@ sk:
           thank_you: 'Vďaka za komentár.'
           thank_you_moderated: 'Ďakujeme za Váš komentár. Vaša správa čaká na schválenie a čoskoro sa objaví.'
         index:
-          no_teacher_blog_articles_yet: Zatiaľ nie sú v teacher_blogu žiadne články. Zostaňte naladení.
+          no_student_blog_articles_yet: Zatiaľ nie sú v student_blogu žiadne články. Zostaňte naladení.
         show:
-          teacher_blog_home: Hlavná stránka teacher_blogu
+          student_blog_home: Hlavná stránka student_blogu
           comments:
             title: Komentáre
             add: Pridať komentár
@@ -145,24 +145,24 @@ sk:
           by: Od
           source: Zdroj
         tagged:
-          no_teacher_blog_articles_yet: 'Zatiaľ nie sú v teacher_blogu žiadne články. Zostaňte naladení.'
+          no_student_blog_articles_yet: 'Zatiaľ nie sú v student_blogu žiadne články. Zostaňte naladení.'
           posts_tagged: Príspevky pre tag
         archive:
-          teacher_blog_archive_for: 'TeacherBlog archív pre %{date}'
-          no_teacher_blog_articles_posted: 'Nie sú žiadne články publikované %{date}. Zostaňte naladení.'
+          student_blog_archive_for: 'StudentBlog archív pre %{date}'
+          no_student_blog_articles_posted: 'Nie sú žiadne články publikované %{date}. Zostaňte naladení.'
   activerecord:
       models:
-        refinery/teacher_blog/category: Kategória
-        refinery/teacher_blog/comment: Komentár
-        refinery/teacher_blog/post: TeacherBlog článok
+        refinery/student_blog/category: Kategória
+        refinery/student_blog/comment: Komentár
+        refinery/student_blog/post: StudentBlog článok
       attributes:
-        refinery/teacher_blog/category:
+        refinery/student_blog/category:
           title: Názov
-        refinery/teacher_blog/comment:
+        refinery/student_blog/comment:
           name: Meno
           email: E-mail
           message: Správa
-        refinery/teacher_blog/post:
+        refinery/student_blog/post:
           title: Názov
           body: Text
           teaser: Teaser

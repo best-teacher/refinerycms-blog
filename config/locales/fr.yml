@@ -1,9 +1,9 @@
 fr:
   refinery:
     plugins:
-      refinerycms_teacher_blog:
-        title: TeacherBlog
-    teacher_blog:
+      refinerycms_student_blog:
+        title: StudentBlog
+    student_blog:
       admin:
         categories:
           category:
@@ -23,7 +23,7 @@ fr:
             no_items_yet: 'Il n''y aucun %{type} de commentaires.'
           show:
             comment: Commenter
-            teacher_blog_post: Article
+            student_blog_post: Article
             from: Écrit par
             date: Écrit le
             message: Commentaire
@@ -79,14 +79,14 @@ fr:
       comment_mailer:
         notification:
           greeting: Bonjour
-          you_recieved_new_comment: Il y a un nouveau commentaire sur le teacher_blog.
+          you_recieved_new_comment: Il y a un nouveau commentaire sur le student_blog.
           comment_starts: --- comment starts ---
           comment_ends: --- comment ends ---
           from: De
           email: Email
           message: Message
           closing_line: Cordialement
-          ps: P.S. Tous les commentaires sont stockés dans la section "TeacherBlog" de Refinery dans le menu "Commentaires" si vous voulez les revoir plus tard.
+          ps: P.S. Tous les commentaires sont stockés dans la section "StudentBlog" de Refinery dans le menu "Commentaires" si vous voulez les revoir plus tard.
       shared:
         categories:
           title: Catégories
@@ -117,9 +117,9 @@ fr:
           thank_you: 'Merci pour votre commentaire.'
           thank_you_moderated: 'Merci pour votre commentaire. Votre message a été placé en attente de validation et apparaitra bientôt.'
         index:
-          no_teacher_blog_articles_yet: "Il n'y a aucun article pour l'instant. Restez en alerte."
+          no_student_blog_articles_yet: "Il n'y a aucun article pour l'instant. Restez en alerte."
         show:
-          teacher_blog_home: Accueil du teacher_blog
+          student_blog_home: Accueil du student_blog
           comments:
             title: Commentaires
             add: Ajouter un commentaire
@@ -132,23 +132,23 @@ fr:
           message: Message
           by: par
         tagged:
-          no_teacher_blog_articles_yet: "Il n'y a aucun article pour l'instant. Restez en alerte."
+          no_student_blog_articles_yet: "Il n'y a aucun article pour l'instant. Restez en alerte."
           posts_tagged: Articles taggés
         archive:
-          teacher_blog_archive_for: 'Archive du teacher_blog pour le %{date}'
-          no_teacher_blog_articles_posted: "Il n'y a aucun article pour la date du %{date}. Restez en alerte."
+          student_blog_archive_for: 'Archive du student_blog pour le %{date}'
+          no_student_blog_articles_posted: "Il n'y a aucun article pour la date du %{date}. Restez en alerte."
   activerecord:
     models:
-      refinery/teacher_blog/category: Categorie
-      refinery/teacher_blog/comment: Commentaire
-      refinery/teacher_blog/post: Article
+      refinery/student_blog/category: Categorie
+      refinery/student_blog/comment: Commentaire
+      refinery/student_blog/post: Article
     attributes:
-      refinery/teacher_blog/category:
+      refinery/student_blog/category:
         title: Titre
-      refinery/teacher_blog/comment:
+      refinery/student_blog/comment:
         name: Nom
         email: Email
         message: Message
-      refinery/teacher_blog/post:
+      refinery/student_blog/post:
         title: Titre
         body: Corps

@@ -1,9 +1,0 @@
-<% content_for :side_body do %>
-  <%= yield(:body_content_right_prepend) %>
-  <%= render :partial => "/refinery/teacher_blog/shared/rss_feed" %>
-  <%= render :partial => "/refinery/teacher_blog/shared/categories" %>
-  <%= render :partial => "/refinery/teacher_blog/shared/tags" %>
-  <%= render :partial => "/refinery/teacher_blog/shared/posts" %>
-  <%= teacher_blog_archive_widget %>
-  <%= yield(:body_content_right_append) %>
-<% end %>

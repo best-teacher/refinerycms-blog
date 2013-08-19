@@ -1,9 +1,9 @@
 it:
   refinery:
     plugins:
-      refinerycms_teacher_blog:
-        title: TeacherBlog
-    teacher_blog:
+      refinerycms_student_blog:
+        title: StudentBlog
+    student_blog:
       admin:
         categories:
           category:
@@ -23,7 +23,7 @@ it:
             no_items_yet: 'Non ci sono %{type} commenti.'
           show:
             comment: Commento
-            teacher_blog_post: Articolo
+            student_blog_post: Articolo
             from: Pubblicato da
             date: Pubblicato il
             message: Commento
@@ -44,7 +44,7 @@ it:
             copy_body: Copia il testo dell'articolo nel teaser
             copy_body_help: Lascia il teaser bianco per creare il teaser automaticamente.
           index:
-            no_items_yet: 'Non ci sono ancora articoli in questo TeacherBlog. Clicca su "%{create}" per aggiungerne uno.'
+            no_items_yet: 'Non ci sono ancora articoli in questo StudentBlog. Clicca su "%{create}" per aggiungerne uno.'
           uncategorized:
             no_items_yet: 'Non ci sono articoli senza categoria.'
           post:
@@ -90,7 +90,7 @@ it:
           email: Email
           message: Testo
           closing_line: Saluti
-          ps: 'P.S. Tutti i commenti sono memorizzati nella sezione "TeacherBlog di Refinery sotto la voce "Commenti" se mai volessi visualizzarli lì.'
+          ps: 'P.S. Tutti i commenti sono memorizzati nella sezione "StudentBlog di Refinery sotto la voce "Commenti" se mai volessi visualizzarli lì.'
       shared:
         categories:
           title: Categorie
@@ -120,7 +120,7 @@ it:
           thank_you: 'Grazie per aver scritto un commento.'
           thank_you_moderated: 'Grazie per aver scritto un commento. Il tuo messaggio è stato inserito nella coda di moderazione e sarà visibile a breve.'
         index:
-          no_teacher_blog_articles_yet: Non sono stati ancora pubblicati articoli nel teacher_blog. Continuate a seguirci.
+          no_student_blog_articles_yet: Non sono stati ancora pubblicati articoli nel student_blog. Continuate a seguirci.
         show:
           comments:
             title: Commenti
@@ -134,23 +134,23 @@ it:
           message: Articolo
           by: da
         tagged:
-          no_teacher_blog_articles_yet: Non sono stati ancora pubblicati articoli nel teacher_blog. Continuate a seguirci.
+          no_student_blog_articles_yet: Non sono stati ancora pubblicati articoli nel student_blog. Continuate a seguirci.
           posts_tagged: Articoli taggati
         archive:
-          teacher_blog_archive_for: 'Articoli pubblicati il %{date}'
-          no_teacher_blog_articles_posted: Non sono stati pubblicati articoli nel teacher_blog il %{date}. Continuate a seguirci.
+          student_blog_archive_for: 'Articoli pubblicati il %{date}'
+          no_student_blog_articles_posted: Non sono stati pubblicati articoli nel student_blog il %{date}. Continuate a seguirci.
   activerecord:
     models:
-      refinery/teacher_blog/category: Categoria
-      refinery/teacher_blog/comment: Commento
-      refinery/teacher_blog/post: Articolo
+      refinery/student_blog/category: Categoria
+      refinery/student_blog/comment: Commento
+      refinery/student_blog/post: Articolo
     attributes:
-      refinery/teacher_blog/category:
+      refinery/student_blog/category:
         title: Titolo
-      refinery/teacher_blog/comment:
+      refinery/student_blog/comment:
         name: Nome
         email: Email
         message: Testo
-      refinery/teacher_blog/post:
+      refinery/student_blog/post:
         title: Titolo
         body: Testo

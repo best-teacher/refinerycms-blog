@@ -1,5 +1,5 @@
 Refinery::Core::Engine.routes.draw do
-  namespace :teacher_blog, :path => Refinery::TeacherBlog.page_url do
+  namespace :student_blog, :path => Refinery::StudentBlog.page_url do
     root :to => "posts#index"
     resources :posts, :only => [:show]
 
@@ -10,9 +10,9 @@ Refinery::Core::Engine.routes.draw do
     get 'tagged/:tag_id(/:tag_name)' => 'posts#tagged', :as => 'tagged_posts'
   end
 
-  namespace :teacher_blog, :path => '' do
+  namespace :student_blog, :path => '' do
     namespace :admin, :path => 'refinery' do
-      scope :path => Refinery::TeacherBlog.page_url do
+      scope :path => Refinery::StudentBlog.page_url do
         root :to => "posts#index"
 
         resources :posts do

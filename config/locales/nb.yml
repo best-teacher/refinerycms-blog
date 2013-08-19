@@ -1,9 +1,9 @@
 nb:
   refinery:
     plugins:
-      refinerycms_teacher_blog:
-        title: TeacherBlog
-    teacher_blog:
+      refinerycms_student_blog:
+        title: StudentBlog
+    student_blog:
       admin:
         posts:
           form:
@@ -14,11 +14,11 @@ nb:
             meta_description_title: Meta beskrivelse
             meta_description_help: Skriv en kort beskrivelse på to eller tre setninger som forteller hva denne siden inneholder.
           index:
-            no_items_yet: 'Det er ingen TeacherBlog Posts enda. Klikk på "Lag en ny TeacherBlog Posts" for å legge til din første teacher_blog posts.'
+            no_items_yet: 'Det er ingen StudentBlog Posts enda. Klikk på "Lag en ny StudentBlog Posts" for å legge til din første student_blog posts.'
           post:
-            view_live: 'Vis hvordan denne teacher_blog post ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>'
-            edit: Rediger denne teacher_blog post
-            delete: Fjern denne teacher_blog post permanent
+            view_live: 'Vis hvordan denne student_blog post ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>'
+            edit: Rediger denne student_blog post
+            delete: Fjern denne student_blog post permanent
         submenu:
           comments:
             new: ny
@@ -26,6 +26,6 @@ nb:
             new: Lag en ny post
           settings:
             update_notified: Oppdater hvem som blir informert
-    teacher_blog_posts:
+    student_blog_posts:
       show:
-        other: Andre TeacherBlog Posts
+        other: Andre StudentBlog Posts

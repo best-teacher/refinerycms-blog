@@ -1,0 +1,37 @@
+<% flash.each do |key, value| %>
+ <div id='flash' class="flash flash_<%= key %>">
+   <%= value %>
+ </div>
+<% end %>
+<article id="student_blog_post">
+  <header>
+    <h1><%= @post.title %></h1>
+    <section class='details'>
+      <time datetime="<%=l @post.published_at.to_date, :format => :default %>" class='posted_at'>
+        <%= t('created_at', :scope => 'refinery.student_blog.shared.posts', :when => l(@post.published_at.to_date, :format => :short)) %>
+      </time>
+      <%= content_tag(:div, "#{t('by', :scope => 'refinery.student_blog.posts.show')} #{@post.author.username}", :class => "student_blog_author") if @post.author.present? %>
+      <% if @post.source_url.present? %>
+        <div class='student_blog_source'>
+          <%= "#{t('source', :scope => 'refinery.student_blog.posts.show')}: " %>
+          <%= link_to (@post.source_url_title.blank? ? @post.source_url : @post.source_url_title), @post.source_url %>
+        </div>
+      <% end %>
+      <% if (categories = @post.categories).any? %>
+        <aside class='filed_in'>
+          <%= t('filed_in', :scope => 'refinery.student_blog.posts.show') %>
+          <% categories.each_with_index do |category, index| %>
+            <%= link_to category.title, refinery.student_blog_category_path(category) -%><%= ',' if index < ((categories.length) - 1) %>
+          <% end %>
+        </aside>
+      <% end %>
+    </section>
+  </header>
+  <%= @post.body.html_safe %>
+
+  <% if Refinery::StudentBlog::Post::ShareThis.enabled? %>
+    <span class="st_sharethis" displayText="ShareThis"></span>
+  <% end %>
+</article>
+<%= render :partial => '/refinery/draft_page_message' unless @post.nil? or @post.live? -%>
+<%= render 'nav' if next_or_previous?(@post) %>

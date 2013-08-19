@@ -1,9 +1,9 @@
 ja:
   refinery:
     plugins:
-      refinerycms_teacher_blog:
-        title: 先生ブログ
-    teacher_blog:
+      refinerycms_student_blog:
+        title: 生徒ブログ
+    student_blog:
       admin:
         categories:
           category:
@@ -23,7 +23,7 @@ ja:
             no_items_yet: '%{type}に関するコメントがありません。'
           show:
             comment: コメント
-            teacher_blog_post: 投稿
+            student_blog_post: 投稿
             from: 投稿者
             date: 投稿時刻
             message: コメント
@@ -120,9 +120,9 @@ ja:
           thank_you: 'コメントをありがとうございます。'
           thank_you_moderated: 'コメントをありがとうございます。コメントが承認待ちとされています。承認次第公開されます。'
         index:
-          no_teacher_blog_articles_yet: ブログ記事がまだ投稿されてません。
+          no_student_blog_articles_yet: ブログ記事がまだ投稿されてません。
         show:
-          teacher_blog_home: ブログ・ホーム
+          student_blog_home: ブログ・ホーム
           comments:
             title: コメント
             add: コメントを投稿
@@ -135,24 +135,24 @@ ja:
           message: メッセージ
           by: '投稿者:'
         tagged:
-          no_teacher_blog_articles_yet: ブログ記事がまだ投稿されてません。
+          no_student_blog_articles_yet: ブログ記事がまだ投稿されてません。
           posts_tagged: 投稿タグ
         archive:
-          teacher_blog_archive_for: '%{date}搭載のブログ記事'
-          no_teacher_blog_articles_posted: '%{date}付のブログ記事が投稿されてません。'
+          student_blog_archive_for: '%{date}搭載のブログ記事'
+          no_student_blog_articles_posted: '%{date}付のブログ記事が投稿されてません。'
   activerecord:
     models:
-      refinery/teacher_blog/category: カテゴリ
-      refinery/teacher_blog/comment: コメント
-      refinery/teacher_blog/post: 投稿
+      refinery/student_blog/category: カテゴリ
+      refinery/student_blog/comment: コメント
+      refinery/student_blog/post: 投稿
     attributes:
-      refinery/teacher_blog/category:
+      refinery/student_blog/category:
         title: 題名
-      refinery/teacher_blog/comment:
+      refinery/student_blog/comment:
         name: 名前
         email: メール
         message: メッセージ
-      refinery/teacher_blog/post:
+      refinery/student_blog/post:
         title: 題名
         body: 本文
         teaser: 短紹介文

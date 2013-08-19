@@ -1,0 +1,21 @@
+<% content_for :body do %>
+  <div id="show_student_blog_post">
+    <%= render 'post' %>
+  </div>
+
+  <% if Refinery::StudentBlog::Post.comments_allowed? %>
+    <%= render 'comments'%>
+  <% end %>
+<% end %>
+
+<%= render :partial => '/refinery/student_blog/shared/body_content_right' %>
+
+<%= render :partial => "/refinery/content_page", :locals => { :remove_automatic_sections => true }  %>
+
+<% content_for :stylesheets, stylesheet_link_tag('refinery/student_blog/frontend') %>
+<% content_for :javascripts do %>
+  <%# enable AJAX'd post nav at your own risk until html5 history API implemented. %>
+  <%#= javascript_include_tag('refinery/student_blog/frontend') %>
+  <script src="http://w.sharethis.com/button/buttons.js"></script>
+  <script>stLight.options({publisher:'<%= StudentBlog::Post::ShareThis.key %>'});</script>
+<% end if Refinery::StudentBlog::Post::ShareThis.enabled? %>
